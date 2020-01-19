@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "poc-monorepo",
   "private": true,
   "workspaces": [
     "components/*",
@@ -21,7 +21,9 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna exec --scope @org/components-* --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
-    "story": "start-storybook -p 5555"
+    "mono:clean": "rm -fr node_modules && lerna clean",
+    "build": "lerna exec --scope components-* --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+    "story": "start-storybook -p 5555",
+    "dev:react1": "yarn workspace app-react-1 run dev"
   }
 }
