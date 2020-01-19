@@ -1,0 +1,12 @@
+{
+  "name": "@org/components-button-danger",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.0"
+  }
+}
